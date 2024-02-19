@@ -2,11 +2,11 @@ import Category from '../models/category';
 import Prestations from '../models/prestations';
 
 export const CATEGORIES = [
-    new Category('c1', 'Musée'),
-    new Category('c2', 'Parc'),
-    new Category('c3', 'Visite'),
-    new Category('c4', 'Chateau'),
-    new Category('c5', 'Loisir'),
+    new Category('c1', 'Musée','visite du Muéee' ),
+    new Category('c2', 'Parc', 'Prenez l/air frais'),
+    new Category('c3', 'Visite', 'Visite de la ville'),
+    new Category('c4', 'Chateau', 'Visite du chateau'),
+    new Category('c5', 'Loisir' , 'Loisir'),
 ];
 
 export const PRESTATIONS = [
