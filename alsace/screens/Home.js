@@ -1,18 +1,21 @@
 import React from 'react';
 import { View, StyleSheet,Image, Text} from 'react-native';
-import SearchButton from '../components/SearchButton';
+import SearchBar from '../components/SearchBar';
 
 export default function Home() {
     return (
         <View>
             <View >
-                <SearchButton />
+                <SearchBar />
             </View>
             <View>
                 <Image style={styles.image} source={require('../assets/images/aigle.png')} />
-                <Text> En ce moment </Text> 
-                <Text> Visitez L'Alsace </Text>
+                <Text style={styles.titleText}> En ce moment </Text> 
+                <Text style={styles.secondText}> Visitez L'Alsace </Text>
                 <Text> autrement </Text>
+            </View>
+            <View style={styles.milieu}>
+                <Image style={styles.imagemilieu} source={require('../assets/images/cigognes.png')} />
             </View>
 
         </View>  
@@ -22,11 +25,28 @@ export default function Home() {
 const styles = StyleSheet.create({
 
     image: {
+        paddingTop: 100,
+        width: 200,
+        height: 100,
+        alignSelf: 'center',
+        marginTop:10,
+        margin:10,
+    },
+    imagemilieu: {
         width: 300,
         height: 100,
         alignSelf: 'center',
-        padding: 20,
-        marginTop:40,
-        margin:20,
-    }
+        marginTop:10,
+        margin:10,
+    },
+    titleText: {
+        color: 'red',
+    },
+    secondText: {
+        color: 'green',
+    },
+    milieu: {
+        flex: 1,
+        paddingBottom:50
+    },
 });
