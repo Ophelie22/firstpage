@@ -1,9 +1,14 @@
 import React from 'react';
 import { useState } from 'react'; //useState est un hook qui permet de creer un etat dans un composant fonctionnel
 import { StyleSheet,Button, View, Keyboard,TextInput } from 'react-native';
-import { Feather, Entypo } from "@expo/vector-icons";
+import { Feather, Entypo, MaterialCommunityIcons  } from "@expo/vector-icons";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
+    const loginWithFacebook = () => {
+        console.log('Button pressed');
+    };
+    
     return (
         <View style={styles.container}>
             <View
@@ -49,6 +54,16 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
                 ></Button>
             </View>
             )}
+             {/* search Icon */}
+            <View>
+                <MaterialCommunityIcons
+                name="information-variant"
+                size={30}
+                color="black"
+                style={{ marginLeft: 10, paddingLeft: 10}}  
+                />
+            </View>
+            
         </View>
         );
     };
@@ -58,15 +73,15 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
     const styles = StyleSheet.create({
         container: {
         paddingTop: 50,
-        paddingHorizontal: 16,
-        margin: 15,
+        paddingHorizontal: 13,
+        marginLeft: 12,
         justifyContent: "flex-start",
         alignItems: "center",
         flexDirection: "row",
-        width: "80%",
+        width: "78%",
     
         },
-            searchBar__unclicked: {
+        searchBar__unclicked: {
         padding: 10,
         flexDirection: "row",
         width: "95%",
@@ -84,8 +99,11 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
         justifyContent: "space-evenly",
         },
         input: {
-        fontSize: 15,
-        marginLeft: 10,
+        fontSize: 14,
+        marginLeft: 12,
         width: "90%",
         },
+        iconInfo: {
+        flexDirection: "row",
+        }
     });

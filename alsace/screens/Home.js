@@ -11,7 +11,7 @@ export default function Home() {
             <View>
                 <Image style={styles.image} source={require('../assets/images/aigle.png')} />
                 <Text style={styles.titleText}> En ce moment </Text> 
-                <Text style={styles.secondText}> Visitez L'Alsace </Text>
+                <Text style={styles.secondText}> Visitez L'Alsace</Text>
                 <Text> autrement </Text>
             </View>
             <View style={styles.milieu}>
@@ -34,7 +34,10 @@ const styles = StyleSheet.create({
     },
     imagemilieu: {
         width: 300,
-        height: 100,
+        height: 200,
+        borderRadius: 28,
+        paddingVertical: 8,
+        paddingHorizontal: 10,
         alignSelf: 'center',
         marginTop:10,
         margin:10,

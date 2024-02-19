@@ -13,7 +13,7 @@ export default function App() {
 };
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: 'pink',
+    backgroundColor: '#f1f2f6',
     marginHorizontal: 20,
   }
 });
