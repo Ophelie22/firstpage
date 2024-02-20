@@ -1,8 +1,12 @@
 import React from 'react';
-import { useState } from 'react'; //useState est un hook qui permet de creer un etat dans un composant fonctionnel
+//import { useState } from 'react'; //useState est un hook qui permet de creer un etat dans un composant fonctionnel
 import { StyleSheet,Button, View, Keyboard,TextInput } from 'react-native';
+<<<<<<< HEAD
 import { Feather, Entypo, MaterialCommunityIcons  } from "@expo/vector-icons";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+=======
+import { Feather, Entypo, MaterialCommunityIcons } from "@expo/vector-icons";
+>>>>>>> b14057f (recup des nom des categories)
 
 const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
     const loginWithFacebook = () => {
@@ -18,6 +22,7 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
                 : styles.searchBar__unclicked
             }
             >
+
             {/* search Icon */}
             <Feather
                 name="search"
@@ -25,34 +30,37 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
                 color="black"
                 style={{ marginLeft: 1 }}
             />
+
             {/* Input field */}
             <TextInput
-            style={styles.input}
-            placeholder="Rechercher une activité"
-            value={searchPhrase}
-            onChangeText={setSearchPhrase}
-            onFocus={() => {
-                setClicked(true);
-                }}
+                style={styles.input}
+                placeholder="Rechercher une activité"
+                value={searchPhrase}
+                onChangeText={setSearchPhrase}
             />
+
             {/* cross Icon, depending on whether the search bar is clicked or not */}
             {clicked && (
-            <Entypo name="cross" size={10} color="black" style={{ padding: 1 }} onPress={() => {
+            <Entypo 
+                name="cross" 
+                size={10} color="black" 
+                style={{ padding: 1 }} 
+                onPress={() => {
                 setSearchPhrase("")
             }}/>
             )}
             </View>
-            {/* cancel button, depending on whether the search bar is clicked or not */}
-            {clicked && (
+
+             {/* search Icon */}
             <View>
-                <Button
-                title="Cancel"
-                onPress={() => {
-                    Keyboard.dismiss();
-                    setClicked(false);
-                }}
-                ></Button>
+                <MaterialCommunityIcons
+                name="information-variant"
+                size={30}
+                color="black"
+                style={{ marginLeft: 10, paddingLeft: 10}}  
+                />
             </View>
+<<<<<<< HEAD
             )}
              {/* search Icon */}
             <View>
@@ -64,6 +72,8 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
                 />
             </View>
             
+=======
+>>>>>>> b14057f (recup des nom des categories)
         </View>
         );
     };
@@ -99,8 +109,13 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
         justifyContent: "space-evenly",
         },
         input: {
+<<<<<<< HEAD
         fontSize: 14,
         marginLeft: 12,
+=======
+        fontSize: 10,
+        marginLeft: 10,
+>>>>>>> b14057f (recup des nom des categories)
         width: "90%",
         },
         iconInfo: {

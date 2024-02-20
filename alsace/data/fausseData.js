@@ -6,7 +6,7 @@ export const CATEGORIES = [
     new Category('c2', 'Parc', 'Prenez l/air frais'),
     new Category('c3', 'Visite', 'Visite de la ville'),
     new Category('c4', 'Chateau', 'Visite du chateau'),
-    new Category('c5', 'Loisir' , 'Loisir'),
+    //new Category('c5', 'Loisir' , 'Loisir'),
 ];
 
 export const PRESTATIONS = [
@@ -51,5 +51,5 @@ export const PRESTATIONS = [
         '1 rue du chateau , 67000 Strasbourg',
         'Ouvert du lundi au samedi, de 10h à 20h accessibles à toute personne',
         'https://unsplash.com/fr/photos/route-vide-entre-les-maisons-wtlSHRt9uRc',
-    )
+    ),
 ];

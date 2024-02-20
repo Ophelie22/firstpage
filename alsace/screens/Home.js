@@ -17,10 +17,14 @@ export default function Home() {
             </View>
             <View style={styles.milieu}>
                 <Image style={styles.imagemilieu} source={require('../assets/images/cigognes.png')} />
+                <Text style = {styles.titlered}> Nos suggestions </Text>
             </View>
+<<<<<<< HEAD
             <View>
                 <CategoryGridTitle  />
             </View>
+=======
+>>>>>>> b14057f (recup des nom des categories)
         </View>  
     );   
 }
@@ -30,7 +34,7 @@ const styles = StyleSheet.create({
     image: {
         paddingTop: 100,
         width: 200,
-        height: 100,
+        height: 200,
         alignSelf: 'center',
         marginTop:10,
         margin:10,
@@ -53,6 +57,12 @@ const styles = StyleSheet.create({
     },
     milieu: {
         flex: 1,
-        paddingBottom:50
+        paddingBottom:10
     },
+    titlered: {
+        color: 'red',
+        fontSize: 15,
+        marginBottom: 0,
+        paddingBottom: 1,
+    }
 });
