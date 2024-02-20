@@ -15,11 +15,12 @@ export default function App() {
 
   return (
     //<View style={styles.scrollView}>
+    //<Stack.Screen name="Prestation" component={PrestationScreen} />
     <>
       <Home />
           <NavigationContainer>
             <Stack.Navigator>
-              <Stack.Screen name="Categorie" component={CategorieScreen} />
+              <Stack.Screen name="CategoriesDesPrestations" component={CategorieScreen} />
               <Stack.Screen name="Prestation" component={PrestationScreen} />
             </Stack.Navigator>
           </NavigationContainer>

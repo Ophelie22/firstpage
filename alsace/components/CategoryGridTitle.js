@@ -1,16 +1,24 @@
-import { View, Text, StyleSheet,Pressable } from 'react-native';
+import { View, Text, StyleSheet,Pressable, Platform } from 'react-native';
 
+//je rajoute la fonction onPress pour naviguer vers la page de la catégorie
+function CategoryGridTitle({title, imageUrl, shortdescription, onPress}) {
 
-function CategoryGridTitle({title, imageUrl, shortdescription}) {
-
+///TODO RAJOUTER L'IMAGE
     return (
         
             <View style={styles.gridItem}>
-                <Pressable style={styles.button}>
+                <Pressable 
+                android_ripple={{ color: '#ccc' }}
+                style={({ pressed }) => [
+                    styles.button,
+                    pressed ? styles.buttonPressed : null,
+                    ]}
+                    //onva rajouter une fonction pour naviguer vers la page de la catégorie avec OnPress
+                    onPress={onPress}
+                >
                     <View styles={styles.innerContainer}>
-                        <Text>{title}</Text>
-                        
-                        <Text>{shortdescription}</Text>
+                        <Text style={styles.title}>{title}</Text>                    
+                        <Text style={styles.description}>{shortdescription}</Text>
                     </View>
                 </Pressable>
             </View>
@@ -29,10 +37,17 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightgrey',
         borderRadius: 10,
         elevation: 5,
+        shadowOpacity: 0.25,
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 8,
+        overflow: Platform.OS === 'android' ? 'hidden' : 'visible',
     },
     
     button: {
         flex: 1,
+    },
+    buttonPressed: {
+        opacity: 0.5,
     },
     innerContainer: {
         flex: 1,
@@ -41,4 +56,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    title: {
+        fontWeight: 'bold',
+        fontSize: 13,
+        backgroundColor: 'red',
+        borderRadius: 15,
+    },
+    description: {
+        fontSize: 10,
+    }
 })

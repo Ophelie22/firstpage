@@ -2,7 +2,7 @@ import  { PRESTATIONS } from "../data/fausseData";
 import { View, Text, StyleSheet} from 'react-native';
 
 
-function PrestationScreen() {
+function PrestationScreen({navigation}) {
     return(
         <View style={styles.container}>
             <Text> test  </Text>
