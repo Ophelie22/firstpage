@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 15,
         height: 150,
+        backgroundColor: 'lightgrey',
         borderRadius: 10,
         elevation: 5,
     },
