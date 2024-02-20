@@ -21,7 +21,6 @@ export default function Home() {
             <View>
                 <CategoryGridTitle  />
             </View>
-
         </View>  
     );   
 }
