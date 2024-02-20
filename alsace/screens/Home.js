@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet,Image, Text} from 'react-native';
 import SearchBar from '../components/SearchBar';
+import CategoryGridTitle from '../components/CategoryGridTitle';
 
 export default function Home() {
     return (
@@ -16,6 +17,9 @@ export default function Home() {
             </View>
             <View style={styles.milieu}>
                 <Image style={styles.imagemilieu} source={require('../assets/images/cigognes.png')} />
+            </View>
+            <View>
+                <CategoryGridTitle  />
             </View>
 
         </View>  

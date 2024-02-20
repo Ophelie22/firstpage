@@ -1,19 +1,22 @@
 import { FlatList } from "react-native";
 import CategoryGridTitle from "../components/CategoryGridTitle";
-import  { CATEGORIES } from "../data/dummy-data";
+import  { CATEGORIES } from "../data/fausse-data";
 
-function CategoriesScreen({}) {
+function renderCategoryItem(itemData) {
     return (
+        //a voi si je met la short description
+        <CategoryGridTitle title={itemData.item.title} />
+    );
+}
+
+    function CategoriesScreen() {
+        return (
         <FlatList
             data={CATEGORIES}
-            renderItem={({ item }) => (
-                <CategoryGridTitle
-                    title={item.title}
-                    short_description={item.short_description}
-                />
-            )}
+            keyExtractor={(item) => item.id}
+            renderItem={renderCategoryItem}
             numColumns={2}
         />
-    );
-
+        );
 }
+export default CategoriesScreen;
