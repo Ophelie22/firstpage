@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet,Pressable, Platform } from 'react-native';
 
 //je rajoute la fonction onPress pour naviguer vers la page de la catégorie
-function CategoryGridTitle({title, imageUrl, shortdescription, onPress}) {
+function CategoryGridTitle({title, imageUrl, shortdescription, onPress, navigation}) {
 
 ///TODO RAJOUTER L'IMAGE
     return (
@@ -57,10 +57,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontWeight: 'bold',
-        fontSize: 13,
+        fontSize: 12,
         backgroundColor: 'red',
-        borderRadius: 15,
+        marginRight: 70,
+        alignItems: 'center',
+        paddingRight: 13,
+        borderRadius: 10,
     },
     description: {
         fontSize: 10,

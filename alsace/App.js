@@ -21,7 +21,7 @@ export default function App() {
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen name="CategoriesDesPrestations" component={CategorieScreen} />
-              <Stack.Screen name="Prestation" component={PrestationScreen} />
+              <Stack.Screen name="Visite" component={PrestationScreen} />
             </Stack.Navigator>
           </NavigationContainer>
                 
