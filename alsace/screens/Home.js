@@ -2,9 +2,11 @@ import React from 'react';
 import { View, StyleSheet,Image, Text} from 'react-native';
 import SearchBar from '../components/SearchBar';
 import CategoryGridTitle from '../components/CategoryGridTitle';
+import { WebView } from 'react-native-webview';;
 
 export default function Home() {
     return (
+        
         <View>
             <View >
                 <SearchBar />

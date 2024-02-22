@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet,Pressable, Platform } from 'react-native';
+import { View, Text, Image, StyleSheet,Pressable, Platform } from 'react-native';
 
 //je rajoute la fonction onPress pour naviguer vers la page de la catégorie
-function CategoryGridTitle({title, imageUrl, shortdescription, onPress, navigation}) {
+function CategoryGridTitle({title, imageUrl, shortdescription, onPress}) {
 
 ///TODO RAJOUTER L'IMAGE
     return (
@@ -17,7 +17,8 @@ function CategoryGridTitle({title, imageUrl, shortdescription, onPress, navigati
                     onPress={onPress}
                 >
                     <View styles={styles.innerContainer}>
-                        <Text style={styles.title}>{title}</Text>                    
+                        <Text style={styles.title}>{title}</Text>  
+                        <Image source={{ uri: imageUrl}} ></Image>                  
                         <Text style={styles.description}>{shortdescription}</Text>
                     </View>
                 </Pressable>
